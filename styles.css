@@ -1,0 +1,784 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --buttons: #ca314a;
+  --navbar: #202e38;
+  --fontColor: whitesmoke;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!HEADER Y NAVBAR!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.header {
+  display: flex;
+  height: 80px;
+  background-color: var(--navbar);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px;
+}
+
+.header__logo {
+  width: 65px;
+}
+
+.navbar {
+  display: flex;
+  gap: 60px;
+}
+
+.fa-bars {
+  color: var(--fontColor);
+  font-size: 1.5rem;
+}
+.navbar__toggle,
+.navbar__bars {
+  display: none;
+}
+
+.navbar__list {
+  display: flex;
+  gap: 40px;
+}
+.navbar__list-item {
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--fontColor);
+  padding: 5px 15px;
+  border-radius: 2px;
+}
+.navbar__list-item:hover {
+  color: var(--fontColor);
+  background-color: #576cf7;
+  transition: all 0.5s ease;
+}
+
+.navbar__forms-item {
+  color: var(--fontColor);
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.navbar__forms-item::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--fontColor);
+  height: 3px;
+  left: 0;
+  width: 0;
+  bottom: -8px;
+  transition: all 0.2s ease-in;
+}
+.navbar__forms-item:hover::after {
+  width: 100%;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!  SECTION HERO !!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+#section__hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/Assets/hero-image-alternativo.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+
+#section__hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(56, 81, 97, 1) 100%
+  );
+}
+.hero__container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.151);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 20px;
+  z-index: 2;
+  width: 100%;
+}
+
+.hero__container-h1 {
+  font-size: 3rem;
+  width: 50%;
+  text-align: center;
+}
+
+.hero__container-p {
+  font-size: 1.5rem;
+  width: 50%;
+  text-align: center;
+}
+
+.hero__container-link {
+  font-size: 2rem;
+  background-color: var(--buttons);
+  color: whitesmoke;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.hero__container-link:hover {
+  background-color: white;
+  color: var(--buttons);
+  transition: all 0.5s ease;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!  SECTION ABOUT !!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+#section__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #385161;
+  padding: 40px;
+  gap: 30px;
+}
+
+.about__historia {
+  max-width: 1200px;
+  min-height: 600px;
+  background-image: url(/Assets/Banner\ 1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 20px 0px;
+  gap: 30px;
+}
+.about__historia::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: 1;
+  background-color: #0000009a;
+}
+
+.about__jugar {
+  min-height: 600px;
+  max-width: 1200px;
+  background-image: url(/Assets/banner\ 2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+  padding: 20px 0px;
+}
+.about__jugar::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: 1;
+  background-color: #0000009a;
+}
+
+.about__jugar-h2,
+.about__historia-h2 {
+  width: 70%;
+  font-size: 2.5rem;
+  color: whitesmoke;
+  text-align: center;
+  z-index: 2;
+}
+
+.about__jugar-p,
+.about__historia-p {
+  width: 70%;
+  font-weight: 600;
+  font-size: 1.7rem;
+  background-color: rgba(255, 255, 255, 0.075);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  color: whitesmoke;
+  z-index: 2;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!  SECTION BUY   !!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+#section__buy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #7d9eb4;
+  align-items: center;
+  padding: 80px 0px;
+  position: relative;
+  padding-bottom: 30px;
+  gap: 50px;
+}
+
+#section__buy::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(55, 81, 96, 1) 100%
+  );
+}
+
+.section__buy-h2 {
+  font-size: 2rem;
+  width: 100%;
+  padding: 30px 0px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.712);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  z-index: 2;
+}
+.buy__card {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 400px;
+  max-width: 1200px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.712),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.buy__card-p {
+  width: 40%;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.buy__card-image {
+  cursor: pointer;
+  width: 25%;
+}
+
+.pulsing {
+  animation-name: pulsing;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes pulsing {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.buy__card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 35px;
+  align-items: center;
+}
+
+.card__container-p {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.buy__button {
+  text-align: center;
+  padding: 10px 18px;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.card__container-a {
+  background-color: #4a4a80;
+  color: #eae1fb;
+}
+.card__container-button {
+  background-color: #eae1fb;
+  color: #4a4a80;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!! SECTION CONTACT !!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+#section__contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  flex-direction: column;
+  background-color: #334957;
+}
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.836),
+    rgba(255, 255, 255, 0.267)
+  );
+  backdrop-filter: blur(10px);
+  width: 60%;
+  min-width: 430px;
+  border-radius: 20px;
+  gap: 20px;
+  padding: 40px 0px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__info-h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.contact__info-p {
+  font-size: 1.7rem;
+  width: 60%;
+  text-align: center;
+}
+
+.contact__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+.form__content {
+  padding: 8px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.form__submit {
+  padding: 8px 40px;
+  border: none;
+  color: #ffffff;
+  background-color: #223dec;
+  border-radius: 35px;
+  font-size: 1.5rem;
+}
+
+.contact__map {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__map-iframe {
+  width: 80%;
+  border-radius: 20px;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!! FOOTER  !!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+#section__footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  background-color: #141414;
+  gap: 40px;
+}
+#section__footer::after {
+  content: "© Dungeons And Dragons 2024";
+  position: absolute;
+  background-color: #202e38;
+  width: 100%;
+  bottom: 70px;
+  font-size: 1.5rem;
+  color: var(--fontColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+.footer__social,
+.footer__legales,
+.footer__recursos {
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  gap: 40px;
+}
+.footer__social-bottom {
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-brands {
+  color: var(--fontColor);
+  font-size: 2.5rem;
+}
+.fa-brands:hover {
+  color: #4a6c82;
+  transition: all 0.5s ease;
+}
+.footer__h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  position: relative;
+  letter-spacing: 1.5px;
+  transition: all 0.8s ease;
+  color: rgb(155, 155, 155);
+}
+
+.footer__h2:hover {
+  color: var(--fontColor);
+}
+.footer__h2::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #223dec;
+  height: 4px;
+  left: 0;
+  width: 0;
+  bottom: -8px;
+  transition: all 0.2s ease-in;
+}
+
+.footer__h2:hover::after {
+  width: 100%;
+}
+
+.footer__legales-bottom,
+.footer__recursos-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+.footer__legales-link,
+.footer__recursos-link {
+  color: gainsboro;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 992px) {
+  #section__contact {
+    flex-direction: column;
+    background-color: #334957;
+    padding-bottom: 30px;
+  }
+
+  .contact__container,
+  .contact__map {
+    width: 100%;
+  }
+
+  /** !!!!!!!!!!!! FOOTER!!!!!!!!!!!!!! **/
+  .footer__h2 {
+    font-size: 1.4rem;
+  }
+  .fa-brands {
+    font-size: 2rem;
+  }
+
+  .footer__legales-link,
+  .footer__recursos-link {
+    font-size: 1rem;
+  }
+
+  #section__footer::after {
+    font-size: 1.2rem;
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* * !!!!!!!!!!!!!!! NAVBAR !!!!!!!!!!!!!* */
+  .header__logo {
+    width: 50px;
+  }
+  .navbar__list {
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #2e4372;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 30px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    /* display: none; */
+    transform: translateX(-200%);
+    transition: all 0.8s ease;
+  }
+  .navbar__list::after {
+    content: "";
+    position: absolute;
+    top: 228px;
+    width: 80%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.788);
+  }
+  .navbar__list::before {
+    content: "";
+    position: absolute;
+    top: 360px;
+    width: 80%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.788);
+  }
+
+  .navbar__list-item {
+    padding: 0;
+    background-color: transparent;
+    color: var(--fontColor);
+    font-size: 1.5rem;
+  }
+  .navbar__bars {
+    display: block;
+  }
+  #navbar__toggle:checked ~ .navbar__list {
+    /* display: flex; */
+    transform: translateX(0%);
+  }
+
+  .navbar__forms {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 30px;
+  }
+  .navbar__forms::before {
+    content: "";
+    position: absolute;
+    top: -76px;
+    width: 80%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.788);
+  }
+
+  .navbar__forms-item {
+    font-size: 1.5rem;
+  }
+  .form__barrita {
+    display: none;
+  }
+  /* * !!!!!!!!!!!!!!! SECTION HERO !!!!!!!!!!!!!* */
+
+  #section__hero {
+    background-position: 50%;
+  }
+
+  .hero__container-h1 {
+    font-size: 2rem;
+    width: 80%;
+  }
+
+  .hero__container-p {
+    font-size: 1rem;
+    width: 80%;
+  }
+
+  .hero__container-link {
+    font-size: 1.5rem;
+  }
+
+  /* * !!!!!!!!!!!!!!! SECTION ABOUT !!!!!!!!!!!!!* */
+
+  .about__historia {
+    background-position: 75%;
+  }
+  .about__historia,
+  .about__jugar {
+    min-height: 400px;
+  }
+
+  .about__historia-h2,
+  .about__jugar-h2 {
+    font-size: 1.7rem;
+    width: 90%;
+  }
+  .about__historia-p,
+  .about__jugar-p {
+    font-size: 1.2rem;
+    width: 90%;
+  }
+  .about__jugar {
+    background-position: 60%;
+  }
+  /* * !!!!!!!!!!!!!!! SECTION BUY !!!!!!!!!!!!!!!* */
+  .buy__card-image {
+    width: 35%;
+  }
+  .buy__button {
+    font-size: 1rem;
+  }
+
+  /* * !!!!!!!!!!!!!! SECTION CONTACT!!!!!!!!!!!!!!!!!!!* */
+
+  .contact__info {
+    min-width: 450px;
+  }
+  .contact__info-h2 {
+    font-size: 2rem;
+  }
+
+  .contact__info-p {
+    font-size: 1.3rem;
+  }
+
+  /* * !!!!!!!!!!!!!! SECTION FOOTER!!!!!!!!!!!!!!!!!!!* */
+
+  #section__footer {
+    flex-direction: column;
+    height: auto;
+    padding-top: 30px;
+  }
+  #section__footer::after {
+    height: 40px;
+    bottom: 230px;
+  }
+
+  .footer__social {
+    min-height: auto;
+  }
+  .footer__legales,
+  .footer__recursos {
+    min-height: 210px;
+  }
+}
+
+@media (max-width: 676px) {
+  /* * !!!!!!!!!!!!!!! SECTION ABOUT !!!!!!!!!!!!!* */
+  .about__historia-h2,
+  .about__jugar-h2 {
+    font-size: 1.5rem;
+  }
+  .about__historia-p,
+  .about__jugar-p {
+    font-size: 1rem;
+  }
+
+  .buy__card {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.445);
+  }
+  .buy__card-p {
+    width: 80%;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  .buy__card-image {
+    width: 250px;
+    height: 250px;
+  }
+  .buy__card-container {
+    width: 100%;
+    gap: 10px;
+  }
+  /* * !!!!!!!!!!!!!!! SECTION CONTACT !!!!!!!!!!!!!!!* */
+  .contact__info {
+    min-width: 300px;
+  }
+
+  .form__content {
+    font-size: 0.9rem;
+  }
+}
