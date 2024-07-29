@@ -8,10 +8,12 @@
   text-decoration: none;
   list-style: none;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --buttons: #ca314a;
-  --navbar: #202e38;
+  --navbar: #182127c5;
   --fontColor: whitesmoke;
 }
 
@@ -52,25 +54,26 @@
 
 .navbar__list {
   display: flex;
+  align-items: center;
   gap: 40px;
 }
 .navbar__list-item {
-  color: black;
-  font-size: 1rem;
+  color: whitesmoke;
+  font-size: 1.2rem;
   font-weight: 600;
-  background-color: var(--fontColor);
-  padding: 5px 15px;
-  border-radius: 2px;
 }
 .navbar__list-item:hover {
-  color: var(--fontColor);
-  background-color: #576cf7;
+  color: black;
+  background-color: #ffffffe0;
+  padding: 0px 20px;
+  border-radius: 2px;
   transition: all 0.5s ease;
 }
 
 .navbar__forms-item {
   color: var(--fontColor);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
   position: relative;
 }
 
@@ -125,7 +128,7 @@
   align-items: center;
   gap: 20px;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.151);
+  background-color: rgba(0, 0, 0, 0.219);
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   padding: 20px;
@@ -137,12 +140,14 @@
   font-size: 3rem;
   width: 50%;
   text-align: center;
+  color: var(--fontColor);
 }
 
 .hero__container-p {
   font-size: 1.5rem;
   width: 50%;
   text-align: center;
+  color: var(--fontColor);
 }
 
 .hero__container-link {
@@ -173,8 +178,9 @@
   gap: 30px;
 }
 
-.about__historia {
-  max-width: 1200px;
+.about__historia,
+.about__jugar {
+  max-width: 1000px;
   min-height: 600px;
   background-image: url(/Assets/Banner\ 1.jpg);
   background-repeat: no-repeat;
@@ -182,6 +188,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 20px;
   position: relative;
   padding: 20px 0px;
   gap: 30px;
@@ -191,22 +198,16 @@
   width: 100%;
   position: absolute;
   top: 0;
+  border-radius: 20px;
   height: 100%;
   z-index: 1;
   background-color: #0000009a;
 }
 
 .about__jugar {
-  min-height: 600px;
-  max-width: 1200px;
   background-image: url(/Assets/banner\ 2.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
   gap: 20px;
+  background-position: 60%;
   padding: 20px 0px;
 }
 .about__jugar::before {
@@ -214,6 +215,7 @@
   width: 100%;
   position: absolute;
   top: 0;
+  border-radius: 20px;
   height: 100%;
   z-index: 1;
   background-color: #0000009a;
@@ -231,9 +233,12 @@
 .about__jugar-p,
 .about__historia-p {
   width: 70%;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.452);
   font-weight: 600;
   font-size: 1.7rem;
-  background-color: rgba(255, 255, 255, 0.075);
+  background-color: rgba(255, 255, 255, 0.144);
   border-radius: 10px;
   backdrop-filter: blur(10px);
   color: whitesmoke;
@@ -585,7 +590,7 @@
   .navbar__list {
     width: 100%;
     height: calc(100vh - 70px);
-    background-color: #2e4372;
+    background-color: #2e4472;
     position: absolute;
     top: 70px;
     left: 0;
@@ -593,31 +598,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 50px;
     /* display: none; */
     transform: translateX(-200%);
     transition: all 0.8s ease;
   }
-  .navbar__list::after {
-    content: "";
-    position: absolute;
-    top: 228px;
-    width: 80%;
-    height: 3px;
-    background-color: rgba(255, 255, 255, 0.788);
-  }
-  .navbar__list::before {
-    content: "";
-    position: absolute;
-    top: 360px;
-    width: 80%;
-    height: 3px;
-    background-color: rgba(255, 255, 255, 0.788);
-  }
 
+  .navbar__list-li {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.411);
+  }
   .navbar__list-item {
-    padding: 0;
     background-color: transparent;
+
     color: var(--fontColor);
     font-size: 1.5rem;
   }
@@ -638,14 +635,6 @@
     position: relative;
     gap: 30px;
   }
-  .navbar__forms::before {
-    content: "";
-    position: absolute;
-    top: -76px;
-    width: 80%;
-    height: 3px;
-    background-color: rgba(255, 255, 255, 0.788);
-  }
 
   .navbar__forms-item {
     font-size: 1.5rem;
@@ -661,12 +650,13 @@
 
   .hero__container-h1 {
     font-size: 2rem;
-    width: 80%;
+    width: 100%;
   }
 
   .hero__container-p {
-    font-size: 1rem;
-    width: 80%;
+    font-size: 1.2rem;
+    width: 100%;
+    font-weight: 700;
   }
 
   .hero__container-link {
