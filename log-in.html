@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesion | Dungeons and Dragons</title>
+    <link rel="stylesheet" href="/Assets/CSS/styles.css" />
+    <link rel="stylesheet" href="/Assets/CSS/anexos.css" />
+    <link rel="stylesheet" href="/Assets/CSS/log-in.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ac3b3104d6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html">
+        <img
+          src="./Assets/dungeons and dragons logo.png"
+          alt="Logo"
+          class="header__logo"
+        />
+      </a>
+
+      <nav class="navbar">
+        <label for="navbar__toggle" class="navbar__bars"
+          ><i class="fa-solid fa-bars"></i
+        ></label>
+        <input
+          type="checkbox"
+          name=""
+          id="navbar__toggle"
+          class="navbar__toggle"
+        />
+        <ul class="navbar__list">
+          <li class="navbar__list-li">
+            <a href="#section__hero" class="navbar__list-item">Inicio</a>
+          </li>
+          <li class="navbar__list-li">
+            <a href="#section__about" class="navbar__list-item">Sobre D&D</a>
+          </li>
+          <li class="navbar__list-li">
+            <a href="#section__buy" class="navbar__list-item">Manuales</a>
+          </li>
+          <div class="navbar__forms">
+            <a href="/log-in.html" class="navbar__forms-item">Iniciar Sesion</a>
+            <a href="/sign-up.html" class="navbar__forms-item"
+              ><span class="form__barrita">|</span> Registrarme</a
+            >
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <main class="anexo__hero">
+      <div class="anexo__container">
+        <form action="" class="anexo__form" id="sign-up__form">
+          <h2 class="anexo__form-h2">¿Eres nuevo? ¡Registrate!</h2>
+          <label for="login__user" class="anexo__label"
+            >Nombre de usuario</label
+          >
+          <input
+            type="text"
+            id="login__user"
+            class="login__input"
+            placeholder="Nombre de Usuario"
+          />
+          <label for="login__password" class="anexo__label">Contraseña</label>
+          <input
+            type="password"
+            class="login__password login__input"
+            placeholder="Contraseña"
+          />
+          <div class="anexo__condiciones">
+            <input type="checkbox" id="login__checkbox" />
+            <label for="login__checkbox">Mantener mi sesion iniciada</label>
+          </div>
+
+          <input type="submit" value="Enviar" class="form__button" />
+          <a href="/sign-up.html">¿Eres nuevo? Registrate</a>
+        </form>
+        <div class="anexo__image login__image">
+          <p class="anexo__image-p">¡Bienvenido Dungeon Master!</p>
+        </div>
+      </div>
+    </main>
+    <footer id="section__footer">
+      <div class="footer__social">
+        <div class="footer__social-top">
+          <h2 class="footer__h2">NUESTRAS REDES</h2>
+        </div>
+        <div class="footer__social-bottom">
+          <a href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer__legales">
+        <div class="footer__legales-top">
+          <h2 class="footer__h2">LEGALES</h2>
+        </div>
+        <div class="footer__legales-bottom">
+          <a href="#" class="footer__legales-link">POLITICA DE PRIVACIDAD</a>
+          <a href="#" class="footer__legales-link"
+            >TERMINOS Y CONDICIONES DE USO</a
+          >
+          <a href="#" class="footer__legales-link">CODIGO DEL JUGADOR</a>
+        </div>
+      </div>
+      <div class="footer__recursos">
+        <div class="footer__recursos-top">
+          <h2 class="footer__h2">RECURSOS</h2>
+        </div>
+        <div class="footer__recursos-bottom">
+          <a href="#" class="footer__recursos-link">PODCASTS</a>
+          <a href="#" class="footer__recursos-link">CONTENIDO DE FANS</a>
+          <a href="#" class="footer__recursos-link">ATENCION AL CLIENTE</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

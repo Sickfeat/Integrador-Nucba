@@ -1,0 +1,6 @@
+.login__image {
+  background-image: url(/Assets/sign-up.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 70%;
+}
