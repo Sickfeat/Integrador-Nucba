@@ -1,19 +1,17 @@
-.login__image {
-  background-image: url(/Assets/sign-up.png);
+.sign-up__image {
+  background-image: url(/Assets/log-in-definitivo.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 70%;
 }
 
 @media (max-width: 768px) {
-  .login__image {
+  .sign-up__image {
     width: 80%;
-    height: 450px;
+    height: 590px;
     display: flex;
     padding: 30px 0px;
     justify-content: center;
     align-items: start;
     min-width: 360px;
-    background-position: 100%;
   }
 }

@@ -21,11 +21,6 @@
   position: relative;
 }
 
-.sign-up__image {
-  background-image: url(/Assets/log-in-definitivo.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .anexo__image-p {
   font-size: 2rem;
   color: whitesmoke;
@@ -69,7 +64,7 @@
 .anexo__label {
   display: none;
 }
-.login__input {
+.anexo__input {
   padding: 5px 10px;
   width: 80%;
   border: none;
@@ -78,7 +73,7 @@
   background-color: #e7edf1;
   outline: none;
 }
-.login__input:focus {
+.anexo__input:focus {
   border-bottom: 2px solid rgb(47, 47, 255);
   transition: all 0.5s ease;
 }
@@ -195,16 +190,6 @@
     min-width: 360px;
     justify-content: center;
     align-items: center;
-  }
-
-  .sign-up__image {
-    width: 80%;
-    height: 590px;
-    display: flex;
-    padding: 30px 0px;
-    justify-content: center;
-    align-items: start;
-    min-width: 360px;
   }
 
   /* * !!!!!!!!!!!!!! SECTION FOOTER!!!!!!!!!!!!!!!!!!!* */
